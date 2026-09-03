@@ -411,8 +411,43 @@ Eg.
   we can use extends & include for use base.html file in HTML Templates
 
 ***********************************************************************************  
+##Database Connectivity in Django 
+Create Database & Tables inside the Mysql
+Install mysql connector 
+===>pip install mysql-connector-python
+Go To setting.py File of Project & Add Connection Database section
+DATABASES = {
+    'default': {
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'mydatabase',
+        'USER': 'root',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
 
-  
+Create Models as it same inside models.py but add one class inside 
+class Meta:
+    managed=False
+    db_table='TableName'
+
+After that Make migration & Migrate it & create super user
+===>python manage.py makemigrations    --- Make migrations 
+===>python manage.py migrate ---- migrate
+===>python manage.py createsuperuser 
+username
+email
+password
+password again
+
+Login with created credentials created before
+http://127.0.0.1:8000/admin/
+
+Register Database Model inside admin.py 
+admin.site.register(Database Model Name)
+
+***********************************************************************************
 
 
 
