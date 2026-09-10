@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+    </head>
+    <body>
+        <center>
+            <hr>
+            <h2>Log In</h2>
+            <hr>
+            <form method="post">
+                {%csrf_token%}
+                <input type="text" name="Username" id="Username" placeholder="Username">
+                <br>
+                <br>
+                <input type="password" name="Password" id="Password" placeholder="Password">
+                <br>
+                <br>
+                <button type="submit">Log In</button>
+            </form>
+            <hr>
+        </center>
+    </body>
+</html>

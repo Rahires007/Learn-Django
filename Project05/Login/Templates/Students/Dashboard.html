@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dashboard
+        </title>
+    </head>
+    <body>
+        <center>
+            <hr>
+            <h2>Students Dashboard</h2>   
+            <hr>
+            <a href="http://127.0.0.1:8000/Logout/"><button>Log Out</button></a>
+            <br>
+            <hr>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student Class</th>
+                        <th>Student City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {%for Student in Students%}
+                        <tr>
+                            <td>{{Student.Name}}</td>
+                            <td>{{Student.Class}}</td>
+                            <td>{{Student.City}}</td>
+                        </tr>
+                        {%endfor%}
+                </tbody>
+            </table>
+        </center>
+    </body>
+</html>

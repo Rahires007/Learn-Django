@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Form
+        </title>
+    </head>
+    <body>
+        <center>
+            <hr>
+            <h2>Students Form</h2>
+            <hr>
+            <a href="http://127.0.0.1:8000/Logout/"><button>Log Out</button></a>
+            <br>
+            <hr>
+            <form method="post">
+                {%csrf_token%}
+                <label for="Name">Name</label>
+                <br>
+                <br>
+                <input type="text" name="Name" id="Name">
+                <br>
+                <br>
+                <label for="Class">Class</label>
+                <br>
+                <br>
+                <input type="text" name="Class" id="Class">
+                <br>
+                <br>
+                <label for="City">City</label>
+                <br>
+                <br>
+                <input type="text" name="City" id="City">
+                <br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </center>
+    </body>
+</html>
