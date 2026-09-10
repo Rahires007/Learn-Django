@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dashboard
+        </title>
+    </head>
+    <body>
+        <center>
+            <hr>
+            <h2>Employee Dashboard</h2>
+            <hr>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Employee Name</th>
+                        <th>Employee City</th>
+                        <th>Employee Salary</th>
+                        <th>Joining Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for Employee in Employees%}
+                    <tr>
+                        <td>{{Employee.Emp_Id}}</td>
+                        <td>{{Employee.Name}}</td>
+                        <td>{{Employee.City}}</td>
+                        <td>{{Employee.Salary}}</td>
+                        <td>{{Employee.Date}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+            <hr>
+        </center>
+    </body>
+</html>

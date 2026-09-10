@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dashboard
+        </title>
+    </head>
+    <body>
+        <center>
+            <hr>
+            <h2>Employee Form</h2>
+            <hr>
+            <form method="post">
+                {% csrf_token %}
+                <label for="Name">Employee Name</label>
+                <br>
+                <br>
+                <input type="text" name="Name" id="Name">
+                <br>
+                <br>
+                <label for="City">Employee City</label>
+                <br>
+                <br>
+                <input type="text" name="City" id="City">
+                <br>
+                <br>
+                <label for="Salary">Employee Salary</label>
+                <br>
+                <br>
+                <input type="number" name="Salary" id="Salary">
+                <br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </center>
+    </body>
+</html>
