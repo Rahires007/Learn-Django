@@ -1,0 +1,321 @@
+<!DOCTYPE html> <html> <head> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwxHj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+{% load static %}
+
+<title>
+    Home
+</title>
+
+<style>
+    header {
+        padding: auto;
+        border: 2px solid black;
+        margin: auto;
+    }
+
+    .College {
+        color: white;
+    }
+</style>
+
+<link rel="stylesheet" href="{% static 'Css/Home.css' %}">
+
+</head> <body>
+<header>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+        <div align="left">
+            <h3 class="College">
+                Mgms College Of Computer Science & IT Nanded
+            </h3>
+        </div>
+
+        <div align="right">
+
+            <a href="http://127.0.0.1:8000/">
+                <button class="btn btn-dark">Home</button>
+            </a> |
+
+            <a href="http://127.0.0.1:8000/Register/">
+                <button class="btn btn-dark">Register</button>
+            </a> |
+
+            <a href="http://127.0.0.1:8000/Courses/">
+                <button class="btn btn-dark">Courses</button>
+            </a> |
+
+            <a href="http://127.0.0.1:8000/Inquary/">
+                <button class="btn btn-dark">Inquary</button>
+            </a> |
+
+            <a href="http://127.0.0.1:8000/admin/">
+                <button class="btn btn-dark">Admin</button>
+            </a>
+
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- ================= MAIN SECTION ================= -->
+
+<main class="container my-5">
+
+    <div class="text-center mb-5">
+
+        <h1 class="display-5 fw-bold text-primary">
+            MGMS College of Computer Science & IT
+        </h1>
+
+        <p class="lead">
+            Nanded, Maharashtra
+        </p>
+
+    </div>
+
+
+    <div class="row align-items-center">
+
+        <!-- About College -->
+        <div class="col-md-7">
+
+            <h2 class="mb-3">
+                About MGMS College
+            </h2>
+
+            <p>
+                MGMS College of Computer Science & IT, Nanded is an
+                educational institution focused on computer science,
+                information technology and modern technical education.
+            </p>
+
+            <p>
+                The college provides students with opportunities to
+                develop their technical knowledge, programming skills,
+                problem-solving abilities and professional skills.
+            </p>
+
+            <p>
+                Our goal is to provide a supportive learning environment
+                where students can gain both theoretical knowledge and
+                practical experience required for their future careers.
+            </p>
+
+        </div>
+
+
+        <!-- College Highlights -->
+        <div class="col-md-5">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        College Highlights
+                    </h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            💻 Computer Science & IT Education
+                        </li>
+
+                        <li class="list-group-item">
+                            👨‍🏫 Experienced Mentors
+                        </li>
+
+                        <li class="list-group-item">
+                            📚 Practical Learning
+                        </li>
+
+                        <li class="list-group-item">
+                            🚀 Career-Oriented Skills
+                        </li>
+
+                        <li class="list-group-item">
+                            🏫 Student-Focused Environment
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mission and Vision -->
+
+    <div class="row mt-5">
+
+        <div class="col-md-6 mb-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h3 class="card-title text-primary">
+                        Our Mission
+                    </h3>
+
+                    <p class="card-text">
+                        To provide quality education in computer science
+                        and information technology and help students
+                        develop the knowledge, skills and confidence
+                        required to succeed in their professional careers.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6 mb-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h3 class="card-title text-primary">
+                        Our Vision
+                    </h3>
+
+                    <p class="card-text">
+                        To create skilled, innovative and responsible
+                        professionals who can contribute effectively
+                        to the rapidly changing world of technology.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white mt-5">
+
+    <div class="container py-5">
+
+        <div class="row">
+
+            <!-- College Information -->
+            <div class="col-md-5 mb-4">
+
+                <h4 class="text-primary">
+                    MGMS College
+                </h4>
+
+                <p>
+                    Mgms College Of Computer Science & IT Nanded
+                </p>
+
+                <p class="text-secondary">
+                    Providing quality education and developing
+                    skilled professionals in the field of Computer Science.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+
+                <h5 class="text-primary">
+                    Quick Links
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="http://127.0.0.1:8000/"
+                            class="text-white text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="http://127.0.0.1:8000/Register/"
+                            class="text-white text-decoration-none">
+                            Register
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="http://127.0.0.1:8000/Courses/"
+                            class="text-white text-decoration-none">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="http://127.0.0.1:8000/Inquary/"
+                            class="text-white text-decoration-none">
+                            Inquary
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4">
+
+                <h5 class="text-primary">
+                    Contact Us
+                </h5>
+
+                <p class="mb-2">
+                    📍 Nanded, Maharashtra
+                </p>
+
+                <p class="mb-2">
+                    📞 +91 9876543210
+                </p>
+
+                <p class="mb-2">
+                    ✉️ info@mgmscollege.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr class="border-secondary">
+
+
+        <!-- Copyright -->
+        <div class="text-center">
+
+            <p class="mb-0 text-secondary">
+                © 2026 Mgms College Of Computer Science & IT Nanded
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body> </html>

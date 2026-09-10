@@ -1,0 +1,257 @@
+<!DOCTYPE html> <html> <head> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwxHj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <title>
+        Courses
+    </title>
+
+    <style>
+        header{
+            padding: auto;
+            border: 2px solid black;
+            margin: auto;
+        }
+
+        .card
+        {
+            width: 7cm;
+            height: 7cm;
+            padding: auto;
+            margin: auto;
+            border: 1px solid black;
+            background-color: skyblue;
+        }
+
+        .College
+        {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+            <div align="left">
+                <h3 class="College">
+                    Mgms College Of Computer Science & IT Nanded
+                </h3>
+            </div>
+
+            <div align="right">
+
+                <a href="http://127.0.0.1:8000/">
+                    <button class="btn btn-dark">Home</button>
+                </a> |
+
+                <a href="http://127.0.0.1:8000/Register/">
+                    <button class="btn btn-dark">Register</button>
+                </a> |
+
+                <a href="http://127.0.0.1:8000/Courses/">
+                    <button class="btn btn-dark">Courses</button>
+                </a> |
+
+                <a href="http://127.0.0.1:8000/Inquary/">
+                    <button class="btn btn-dark">Inquary</button>
+                </a> |
+
+                <a href="http://127.0.0.1:8000/admin/">
+                    <button class="btn btn-dark">Admin</button>
+                </a>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <br>
+    <br>
+    <br>
+
+    <hr size="1px" color="red">
+
+    <h2 align="center">
+        Available Courses
+    </h2>
+
+    <hr size="1px" color="red">
+
+
+    <section>
+
+        <table border="2" align="center" class="table table-striped table-hover">
+
+            <thead class="table-primary">
+
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Mentor</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {%for course in Courses%}
+
+                <tr>
+
+                    <td>
+                        {{course.Name}}
+                    </td>
+
+                    <td>
+                        {{course.Description}}
+                    </td>
+
+                    <td>
+                        {{course.Mentor}}
+                    </td>
+
+                    <td>
+                        <a href="http://127.0.0.1:8000/Register/" target="_self">
+                            <button class="btn btn-success btn-sm">
+                                Register
+                            </button>
+                        </a>
+                    </td>
+
+                </tr>
+
+                {%endfor%}
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <hr size="1px" color="red">
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-light border-top border-4 border-primary mt-5">
+
+        <div class="container py-5">
+
+            <div class="row text-center">
+
+                <!-- College -->
+                <div class="col-md-4 mb-4">
+
+                    <div class="card border-0 bg-light shadow-sm h-100">
+
+                        <div class="card-body">
+
+                            <h5 class="text-primary">
+                                MGMS College
+                            </h5>
+
+                            <p class="text-muted">
+                                College of Computer Science & IT
+                            </p>
+
+                            <span class="badge bg-primary">
+                                Nanded, Maharashtra
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Courses -->
+                <div class="col-md-4 mb-4">
+
+                    <div class="card border-0 bg-light shadow-sm h-100">
+
+                        <div class="card-body">
+
+                            <h5 class="text-success">
+                                Our Courses
+                            </h5>
+
+                            <p class="text-muted mb-1">
+                                Python Full Stack
+                            </p>
+
+                            <p class="text-muted mb-1">
+                                Java Full Stack
+                            </p>
+
+                            <p class="text-muted">
+                                Computer Science & IT
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="col-md-4 mb-4">
+
+                    <div class="card border-0 bg-light shadow-sm h-100">
+
+                        <div class="card-body">
+
+                            <h5 class="text-danger">
+                                Contact Us
+                            </h5>
+
+                            <p class="text-muted mb-2">
+                                📍 Nanded, Maharashtra
+                            </p>
+
+                            <p class="text-muted mb-2">
+                                📞 +91 9876543210
+                            </p>
+
+                            <p class="text-muted">
+                                ✉️ info@mgmscollege.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- Bottom Footer -->
+
+            <div class="text-center">
+
+                <p class="mb-1 fw-bold text-primary">
+                    MGMS College Of Computer Science & IT Nanded
+                </p>
+
+                <small class="text-muted">
+                    © 2026 All Rights Reserved | Designed using Bootstrap 5
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
