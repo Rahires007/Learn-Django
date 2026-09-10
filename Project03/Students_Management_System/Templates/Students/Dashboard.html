@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Students Dashboard
+        </title>
+    </head>
+    <body>
+        <center>
+            <hr>
+            <h2>Students Dashboard</h2>
+            <hr>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student Class</th>
+                        <th>Student City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Students in Data %}
+                    <tr>
+                        <td>{{Students.Name}}</td>
+                        <td>{{Students.Class}}</td>
+                        <td>{{Students.City}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </center>
+    </body>
+</html>
