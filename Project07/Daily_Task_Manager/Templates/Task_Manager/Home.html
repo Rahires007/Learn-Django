@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <center>
+        <hr>
+        <font size="7px" color="purple">Task Manager</font>
+        <hr>
+        <table border="1" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <td>
+                        <font size="4px" color="purple">Daily Tasks</font>
+                    </td>
+                    <td>
+                        <font size="4px" color="purple">Tasks Status</font>
+                    </td>
+                    <td>
+                        <font size="4px" color="purple">Task Added Date & Time</font>
+                    </td>
+                    <td>
+                        <font size="4px" color="purple">Actions</font>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Task in All %}
+                <tr>
+                    <td>{{Task.Task}}</td>
+                    <td>{{Task.Status}}</td>
+                    <td>{{Task.Added_Date}}</td>
+                    <td>
+                        <a href="{% url 'MarkAsDone' Task.pk %}"><button type="submit" class="btn btn-dark">Mark As Done</button></a>
+                        <a href="{% url 'Delete' Task.pk %}"><button type="submit" class="btn btn-danger">Delete Task</button></a>
+                        <a href="{% url 'MarkAsUndone' Task.pk %}"><button type="submit" class="btn btn-dark">Mark As Undone</button></a>
+                        <a href="{% url 'Edit' Task.pk %}"><button type="submit" class="btn btn-dark">Edit Task</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+        <a href="http://127.0.0.1:8000/Form/" target="_self"><button type="submit" class="btn btn-success">Add Task</button></a>
+    </center>
+</body>
+
+</html>
