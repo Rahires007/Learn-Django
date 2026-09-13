@@ -5,31 +5,31 @@
             Students Management System
         </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </head>
     <body>
         <center>
             <hr>
             <h2>Students Form</h2>
             <hr>
-            <form method="post">
+            <form action="{% url 'Update' Student.pk %}" method="post">
                 {% csrf_token %}
                 <label for="Name">Name</label>
                 <br>
                 <br>
-                <input type="text" name="Name" id="Name">
+                <input type="text" name="Name" id="Name" value="{{Student.Name}}">
                 <br>
                 <br>
                 <label for="Class">Class</label>
                 <br>
                 <br>
-                <input type="text" name="Class" id="Class">
+                <input type="text" name="Class" id="Class" value="{{Student.Class}}">
                 <br>
                 <br>
                 <label for="City">City</label>
                 <br>
                 <br>
-                <input type="text" name="City" id="City">
+                <input type="text" name="City" id="City" value="{{Student.City}}">
                 <br>
                 <br>
                 <button type="submit" class="btn btn-success">Submit</button>
